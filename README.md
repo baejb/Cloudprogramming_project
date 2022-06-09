@@ -9,6 +9,15 @@ Todolist는 자신이 하고자 하는 일을 작성 할 수 있습니다. 완�
 ![image](https://user-images.githubusercontent.com/82064490/172675100-61f54855-7768-4d5b-bcea-a07c75fa4395.png)
 
 
+<h3>URL 패턴 설계</h3>
 
 
+|  페이지  	|  URL   	|
+|---	|---	|
+|  메인페이지     	|  도메인   	|
+|  일기장 페이지-목록  	|  도메인/diary/  	|
+|  일기장 페이지-상세  	| 도메인/diary/포스트 pk   	|
+|   투두리스트 페이지 - 목록	|  도메인/todolist/   	|
+|  투두리스트 페이지 - 상세 	|   도메인/todolist/포스트 pk	|
+  
 
