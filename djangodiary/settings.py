@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'todolist',
     'diary_single_pages',
     'todolist_single_pages',
+    'crispy_forms',
+    'markdownx',
 ]
 
 MIDDLEWARE = [
@@ -131,3 +133,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, '_media')
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
