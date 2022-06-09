@@ -14,13 +14,16 @@ from .models import Post
 #     )
 class PostList(ListView):
     model = Post
+    ordering = '-pk'
     #template_name = 'diary/index.html' 템플릿 강제
 
 class PostDetail(DetailView):
     model = Post
 
+
 def single_post_pages(request, pk):
-    post = Post.objects.get(pk=pk)
+    post = Post.objects.get(pk='pk')
+
 
 
     return render(

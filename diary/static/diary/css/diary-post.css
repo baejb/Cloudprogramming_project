@@ -1,0 +1,25 @@
+/*!
+ * Start Bootstrap - Blog Post (https://startbootstrap.com/templates/blog-post)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-blog-post/blob/master/LICENSE)
+ */
+body {
+  background-color: #FAD3D3FF;
+}
+.top_navbar{
+  display: flex;
+  justify-content: center;
+  background-color: #DB3545FF;
+}
+#title{
+  font-size: 45px;
+  color: white;
+}
+#login{
+  margin-left: 100px ;
+  font-size: 20px;
+}
+.nav-link{
+  font-size: 28px;
+  margin-left: 20px;
+}
