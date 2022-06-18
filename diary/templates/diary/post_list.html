@@ -6,7 +6,7 @@
         {% if user.is_authenticated %}
             {% if user.is_superuser or user.is_staff %}
                 <a class="btn btn-info btn-sm float-right" href="/diary/create_post/"
-                   role="button"><i class="fas fa-pen"></i>&nbsp;&nbsp;일기 쓰기</a>
+                   role="button"><i class="fas fa-pen"></i>&nbsp;&nbsp;일기 쓰러가기</a>
             {% endif %}
         {% endif %}
                 <h1>Diary
@@ -29,7 +29,7 @@
                         {% else %}
                             <p class="card-text">{{ p.get_content_markdown | truncatewords_html:30 | safe }}</p>
                         {% endif %}
-                        <a href="{{ p.get_absolute_url }}" class="btn btn-primary">Read More &rarr;</a>
+                        <a href="{{ p.get_absolute_url }}" class="btn btn-danger">Read More &rarr;</a>
                         {% if p.tags.exists %}
                             <br />
                             <i class = "fas fa-tags"></i>

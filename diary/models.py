@@ -38,6 +38,7 @@ class Post(models.Model):
     title = models.CharField(max_length=30)
     tags = models.ManyToManyField(Tag, blank=True)
     content = MarkdownxField()
+    hook_msg = models.TextField(blank=True)
     category = models.ForeignKey(Category, null=True, blank=True, on_delete=models.SET_NULL )
     created_at = models.DateTimeField(auto_now_add=True) #새로 작성했을 때 생성
     updated_at = models.DateTimeField(auto_now=True) # 수정했을 때 생성
