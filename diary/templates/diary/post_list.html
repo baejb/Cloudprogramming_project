@@ -6,7 +6,7 @@
         {% if user.is_authenticated %}
             {% if user.is_superuser or user.is_staff %}
                 <a class="btn btn-info btn-sm float-right" href="/diary/create_post/"
-                   role="button"><i class="fas fa-pen"></i>&nbsp;&nbsp;New Post</a>
+                   role="button"><i class="fas fa-pen"></i>&nbsp;&nbsp;일기 쓰기</a>
             {% endif %}
         {% endif %}
                 <h1>Diary
@@ -14,7 +14,7 @@
                     {% if tag %} with tag '{{ tag }}' {% endif %}
                 </h1>
                 {% for p in post_list %}
-                <!-- Blog Post -->
+                <!-- diary Post -->
                 <div class="card mb-4">
                     {% if p.head_image %}
                         <img class="card-img-top" src="{{ p.head_image.url }}" alt="Card image cap">
@@ -51,10 +51,10 @@
                 <!-- Pagination -->
                 <ul class="pagination justify-content-center mb-4">
                     <li class="page-item">
-                        <a class="page-link" href="#">&larr; Older</a>
+                        <a class="page-link" href="#">&larr; 이전</a>
                     </li>
                     <li class="page-item disabled">
-                        <a class="page-link" href="#">Newer &rarr;</a>
+                        <a class="page-link" href="#">다음 &rarr;</a>
                     </li>
                 </ul>
 {% endblock %}

@@ -1,18 +1,18 @@
 {% extends 'diary/base.html' %}
 {% load crispy_forms_tags %}
 {% block title %}
-    <title>Create post-blog</title>
+    <title>Create post-diary</title>
 {% endblock %}
 
 {% block main_area %}
-    <h1>Create New Post</h1>
+    <h1>오늘의 기분에 따른 일기를 작성해주세요! </h1>
     </hr>
 
     <form method="post" enctype="multipart/form-data">{% csrf_token %}
         <table>
             {{ form | crispy }}
         </table>
-        <button type = "submit" class = "btn btn-primary float-right">Submit</button>
+        <button type = "submit" class = "btn btn-primary float-right">작성하기!</button>
     </form>
-    {{ form.media }}
+ {{ form.media }}
 {% endblock %}

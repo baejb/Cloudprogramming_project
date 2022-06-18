@@ -56,23 +56,15 @@ class PostDetail(DetailView):
         return context
 
 
-def single_post_pages(request, pk):
-    post = Post.objects.get(pk='pk')
+def main_pages(request):
+    #post = Post.objects.get(pk='pk')
 
-
-
-    return render(
-        request,
-        'diary/post_detail.html',
-        {
-            'post': post,
-        }
-    )
+    return render(request, 'diary/index.html')
 
 
 def categories_page(request, slug):
     if slug == 'no-category':
-        category = '감정X'
+        category = '미분류'
         post_list = Post.objects.filter(category=None)
     else:
         category = Category.objects.get(slug=slug)
@@ -85,6 +77,7 @@ def categories_page(request, slug):
         'post_list': post_list
     }
     return render(request, 'diary/post_list.html', context)
+
 
 def show_tag_posts(request, slug):
     tag = Tag.objects.get(slug = slug)
@@ -110,6 +103,8 @@ class PostUpdate(LoginRequiredMixin, UpdateView):
             return super(PostUpdate, self).dispatch(request,*args,**kwargs)
         else:
             raise PermissionDenied
+
+
 def add_comment(request, pk):
     if request.user.is_authenticated:
         post = get_object_or_404(Post, pk=pk)
