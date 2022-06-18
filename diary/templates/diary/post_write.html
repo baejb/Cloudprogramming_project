@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+{% load crispy_forms_tags %}
+<head>
+    <title>Create post-diary</title>
+
+        <link rel="stylesheet" href="{% static 'diary/bootstrap/bootstrap.min.css' %}" media="screen">
+<!-- Custom styles for this template -->
+        <link rel="stylesheet" href="{% static 'diary/css/diary-post.css' %}" media="screen">
+
+    <script src="https://kit.fontawesome.com/726bbd6862.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    {% include 'diary/navbar.html' %}
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-md-8 col-lg-9">
+                <h1>오늘의 기분에 따른 일기를 작성해주세요! </h1>
+             </hr>
+
+             <form method="post" enctype="multipart/form-data">{% csrf_token %}
+                <table>
+                 {{ form | crispy }}
+                </table>
+                <button type = "submit" class = "btn btn-danger float-right">작성하기!</button>
+            </form>
+            </div>
+        </div>
+    </div>
+{% include 'diary/footer.html' %}
+</body>
+</html>

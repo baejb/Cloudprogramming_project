@@ -5,7 +5,7 @@
 {% block main_area %}
         {% if user.is_authenticated %}
             {% if user.is_superuser or user.is_staff %}
-                <a class="btn btn-info btn-sm float-right" href="/diary/create_post/"
+                <a class="btn btn-danger btn-sm float-right" href="/diary/create_post/"
                    role="button"><i class="fas fa-pen"></i>&nbsp;&nbsp;일기 쓰러가기</a>
             {% endif %}
         {% endif %}

@@ -21,6 +21,7 @@ from .models import Post, Category, Tag
 
 class PostCreate(LoginRequiredMixin, UserPassesTestMixin, CreateView):
     model = Post
+    template_name = 'diary/post_write.html'
     fields = ['title', 'content', 'head_image', 'file_upload', 'category', 'tags']
     def test_func(self):
         return self.request.user.is_superuser or self.request.user.is_staff
