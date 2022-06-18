@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('diary/', include('diary.urls')),
     path('markdownx/', include('markdownx.urls')),
-    path('', include('diary.urls')),
+    path('', include('diary_main_pages.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

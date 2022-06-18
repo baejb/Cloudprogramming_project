@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'diary',
     'todolist',
-    'diary_single_pages',
+    'diary_main_pages',
     'todolist_single_pages',
     'crispy_forms',
     'markdownx',
