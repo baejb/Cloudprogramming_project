@@ -6,7 +6,7 @@ Todolist는 자신이 하고자 하는 일을 작성 할 수 있습니다. 완�
 
 <h3>Our mood diary flow chart</h3> 
 
-![image](https://user-images.githubusercontent.com/82064490/172675100-61f54855-7768-4d5b-bcea-a07c75fa4395.png)
+![image](https://user-images.githubusercontent.com/82064490/174488023-b0bf73cf-0e32-4abb-9e6a-d4bb24b213f0.png)
 
 
 <h3>URL 패턴 설계</h3>
