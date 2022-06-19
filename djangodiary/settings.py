@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'diary',
     'todolist',
     'diary_main_pages',
-    'todolist_single_pages',
     'crispy_forms',
     'markdownx',
 ]
