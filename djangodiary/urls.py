@@ -25,6 +25,7 @@ urlpatterns = [
     path('markdownx/', include('markdownx.urls')),
     path('', include('diary_main_pages.urls')),
     path('todolist/', include('todolist.urls')),
+    path('accounts/', include('allauth.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
